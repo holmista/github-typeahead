@@ -1,38 +1,106 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+* {
+    font-family: 'Quicksand', sans-serif;
+}
+input{
+    border:0;
+    outline:0;
+    margin-left: 5px;
+    height: 30px;
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+}
+input:focus {outline:none!important;}
+
+.input-wrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 30vw;
+    border: 1px solid #454b58;
+    border-radius: 8px;
+    align-items: center;
+    transition: all 0.7s;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.input-wrapper div {
+    padding-right: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.parent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;
+}
+
+.people{
+    margin-top: 20px;
+}
+.card{
+    width: 30vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #b5a9f5;
+    transition: all 0.7s;
+
+}
+.card:hover{
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.loading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+}
+
+.loading div{
+    padding-bottom: 10px;
+}
+
+.error{
+    width: 15vw;
+    height:3vw;
+    background-color: rgb(247, 112, 112);
+    border-radius: 12px;
+    border: 1px solid rgb(255, 58, 58);
+    font-size: medium;
+    font-weight: 500;
+    margin-bottom: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 7px;
+    animation: slide 4s;
+    position: absolute;
+}
+
+@keyframes slide {
+    0% {margin-bottom: 400px; opacity: 0;}
+    12.5% {margin-bottom: 170px;opacity: 1;}
+    87.5% {margin-bottom: 170px;opacity: 1;}
+    100% {margin-bottom: 400px;opacity: 0;}
+}
+
+@media only screen and (max-width: 400px) {
+    .card {
+        flex-direction: column;
+    }
+
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  @media only screen and (max-width: 600px) {
+    .error{
+        width:60vw;
+        height:10vw
+    }
+    .input-wrapper{
+        width: 80vw;
+    }
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
