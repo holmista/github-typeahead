@@ -1,9 +1,9 @@
 import './App.css'
 
-export default function InputField({value, onChange}) {
+export default function InputField({onChange}) {
   return (
       <div className='input-wrapper'>
-          <input placeholder='start searching...' value={value} onChange={onChange}/>
+          <input placeholder='start searching...' onChange={onChange}/>
           <div>🔍</div>
       </div>
   )

@@ -1,8 +1,8 @@
 import Avatar from '@mui/material/Avatar';
 
-export default function SearchResult({name, url}) {
+export default function SearchResult({name, url, githubUrl}) {
   return (
-    <div className='card'>
+    <div onClick={()=>window.open(githubUrl)} className='card'>
         <div className="container">
           {name}
         </div>

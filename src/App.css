@@ -50,6 +50,7 @@ input:focus {outline:none!important;}
 }
 .card:hover{
     box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }
 
 .loading{
@@ -64,6 +65,7 @@ input:focus {outline:none!important;}
     padding-bottom: 10px;
 }
 
+
 .error{
     width: 15vw;
     height:3vw;
@@ -72,22 +74,25 @@ input:focus {outline:none!important;}
     border: 1px solid rgb(255, 58, 58);
     font-size: medium;
     font-weight: 500;
-    margin-bottom: 400px;
+    margin-bottom: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 7px;
-    animation: slide 4s;
+    animation: slide 2s;
     position: absolute;
 }
 
+
+
 @keyframes slide {
-    0% {margin-bottom: 400px; opacity: 0;}
+    0% {margin-bottom: 500px; opacity: 0;}
     12.5% {margin-bottom: 170px;opacity: 1;}
     87.5% {margin-bottom: 170px;opacity: 1;}
-    100% {margin-bottom: 400px;opacity: 0;}
+    100% {margin-bottom: 500px;opacity: 0;}
 }
+
 
 @media only screen and (max-width: 400px) {
     .card {
@@ -104,3 +109,10 @@ input:focus {outline:none!important;}
         width: 80vw;
     }
   }
+
+.loadmore{
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+    margin-bottom: 45px;
+}
