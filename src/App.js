@@ -13,12 +13,15 @@ export default function App() {
   const [error, setError] = useState("");
   const page = useRef(2);
   let timeout1 = useRef(null);
+  const searchRef = useRef()
 
+  useEffect(()=>searchRef.current.focus(),[])
+  
 
   const fetchData = async (filter, page = 1) => {
     if (filter === "") return;
     try {
-      const perPage = 1;
+      const perPage = 100;
       const res = await axios.get(
         `https://api.github.com/search/users?q=${filter}+in%3Alogin&page=${page}&per_page=${perPage}`
       );
@@ -75,7 +78,7 @@ export default function App() {
   return (
     <div className="parent">
       {error ? <Error errorMessage={error} /> : <></>}
-      <InputField onChange={(e) => handleFilter(e)} />
+      <InputField onChange={(e) => handleFilter(e)} reference={searchRef}/>
 
       <div className="people">
         {users ? (
