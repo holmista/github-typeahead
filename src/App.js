@@ -51,7 +51,6 @@ export default function App() {
     }, 4000);
     return () => {
       clearTimeout(timeOut);
-      console.log(loading)
       if(loading){
         clearTimeout(timeout1);
       } 
